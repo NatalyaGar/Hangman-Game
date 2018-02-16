@@ -13,7 +13,7 @@
       var letterInChosenWord = [];
       var numBlanks = 0;
       var blanksAndSuccesses = [];
-      var wrongGuesses = [];
+      var wrongGuesses =  [];
       var winCounter = 0;     
       var numGuesses = 15;
 
@@ -90,7 +90,9 @@
 
 		    else{
 		    	console.log('Hello from the else condition!');
-		    	wrongGuesses.push(letter)
+		    	
+		    	wrongGuesses.push(letter.toUpperCase());
+		    	
 		        numGuesses --;
 		        console.log(numGuesses)
 		    }
