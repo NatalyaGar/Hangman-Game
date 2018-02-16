@@ -1,0 +1,77 @@
+
+body{
+	
+	background-image: url(../images/darkness.png);
+}
+
+
+
+  h1 {
+	text-align: center;
+	background-color: orange;
+	letter-spacing: 50px;
+	font-family: 'Indie Flower', cursive;
+   }
+
+
+   h3 {
+   	text-align: center;
+   	background-color: orange;
+   	letter-spacing: 10px;
+
+   }
+
+
+
+.container-body{
+	height: 470px;
+	width: 700px;
+	background-color: orange;
+	position: relative;
+	margin-left: 17%;
+	margin-top: 3%;
+	
+	border: dashed 5px;
+}
+
+
+p {
+	font-size: 30px;
+	text-align: center;
+	font-family: 'Indie Flower', cursive;
+
+}
+
+#word-blank {
+	text-align: center;
+	margin-bottom: 30px;
+	font-size: 30px;
+	
+}
+
+#guesses-left,
+#wrong-guesses, 
+#win-counter{
+	margin-left: 32%;
+	font-size: 30px;
+}
+
+.btn1,
+.btn2{
+	float:left;
+	color:black;
+	background-color: #f3c066;
+	margin-left: 0;
+}
+
+.btn1{
+	margin-right: 5px;
+}
+
+
+img {
+	height: 415px;
+	width: 200px;
+	float: left;
+
+}
