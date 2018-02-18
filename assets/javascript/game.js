@@ -189,34 +189,34 @@
               
                        console.log(choosenWord);
                 		
-                			if (choosenWord === wordList["vivaldy"]); {
-	                			console.log("hi");
+                			if (choosenWord === wordList["vivaldy"]) {
+	                			
 						        audioElement.setAttribute("src", "assets/music/Antonio_vivaldi_Winter.mp3");
 						        audioElement.play()
-						        setTimeout(() => audioElement.play() , 1);
+						        setTimeout(() => audioElement.play() , 1)
 
                             } 
                     	  
-                    	  	if (choosenWord === wordList["mozart"]); {
-	                    		 console.log("Hello");
+                    	    else if (choosenWord === wordList["mozart"]) {
+	                    		 
 						         audioElement.setAttribute("src", "assets/music/01Mozart_Symphony40InGMinorK550-1.MoltoAllegro.mp3");
 						         audioElement.play()
-						         setTimeout(() => audioElement.play() , 1);
+						         setTimeout(() => audioElement.play() , 1)
                              }
                           
-					        if (choosenWord === wordList["beethoven"]); {
-                               console.log("Why");
+					        else if (choosenWord === wordList["beethoven"]) {
+                              
 					           audioElement.setAttribute("src", "assets/music/1-01Beethoven_Symphony5InCMinorOp.67-1.AllegroConBrio.mp3");
 					           audioElement.play()
-					           setTimeout(() => audioElement.play() , 1);
+					           setTimeout(() => audioElement.play() , 1)
                              } 
 
                         
-                            if (choosenWord === wordList["tchaikovsky"]); {
-                               console.log ("You");
+                            else  if (choosenWord === wordList["tchaikovsky"]); {
+                               
 						       audioElement.setAttribute("src", "assets/music/11Tchaikovsky_NutcrackerSuiteOp.71a-WaltzOfTheFlowers.mp3");
 						       audioElement.play()
-	                           setTimeout(() => audioElement.play() , 1);
+	                           setTimeout(() => audioElement.play() , 1)
 					         }      
                 	
                 }
