@@ -26,7 +26,7 @@
 		    //and wrongGueses is empty as well.   
 
 			   wrongGuesses = [];
-			   console.log("this is wrong guesses in startGame", wrongGuesses);
+			   console.log("this is wrong guesses in startGame " + wrongGuesses);
 			   numGuesses = 15;
 			   blanksAndSuccesses = [];
 
@@ -117,8 +117,16 @@
 			    if(letterInChosenWord.join() === blanksAndSuccesses.join()){
 			        winCounter++;
 
-			        alert("You win!!");
+			       var composersNameHeading = document.getElementById('composersName');
+			       
+			       console.log(composersNameHeading ); 
+			       composersNameHeading.innerHTML= choosenWord ;
+			      
 			        document.getElementById('win-counter').innerHTML = winCounter;
+			        music();
+
+			         
+                                
 
 			   
                     
@@ -158,11 +166,12 @@
 	
      
 		          // Gets Link for Theme Song
-		       
-		      	  var audioElement = document.createElement("audio");
-		          audioElement.setAttribute("src", "assets/music/01Mozart_Symphony40InGMinorK550-1.MoltoAllegro.mp3");
+		         
+
+		      	   var audioElement = document.createElement("audio");
+		           audioElement.setAttribute("src", "assets/music/01Mozart_Symphony40InGMinorK550-1.MoltoAllegro.mp3");
                   
-                  //music play button
+                 // music play button
 		           $(".btn1").on("click", function() {
 		            audioElement.play();                                    
                        });
@@ -171,9 +180,47 @@
 				        audioElement.pause();
 				      });
                     
+                   
+                 
 
-                                
+                           // play music when guesses is write for each composers 
+                            
+                function music() {
+              
+                       console.log(choosenWord);
+                		
+                			if (choosenWord === wordList["vivaldy"]); {
+	                			console.log("hi");
+						        audioElement.setAttribute("src", "assets/music/Antonio_vivaldi_Winter.mp3");
+						        audioElement.play()
+						        setTimeout(() => audioElement.play() , 1);
 
+                            } 
+                    	  
+                    	  	if (choosenWord === wordList["mozart"]); {
+	                    		 console.log("Hello");
+						         audioElement.setAttribute("src", "assets/music/01Mozart_Symphony40InGMinorK550-1.MoltoAllegro.mp3");
+						         audioElement.play()
+						         setTimeout(() => audioElement.play() , 1);
+                             }
+                          
+					        if (choosenWord === wordList["beethoven"]); {
+                               console.log("Why");
+					           audioElement.setAttribute("src", "assets/music/1-01Beethoven_Symphony5InCMinorOp.67-1.AllegroConBrio.mp3");
+					           audioElement.play()
+					           setTimeout(() => audioElement.play() , 1);
+                             } 
+
+                        
+                            if (choosenWord === wordList["tchaikovsky"]); {
+                               console.log ("You");
+						       audioElement.setAttribute("src", "assets/music/11Tchaikovsky_NutcrackerSuiteOp.71a-WaltzOfTheFlowers.mp3");
+						       audioElement.play()
+	                           setTimeout(() => audioElement.play() , 1);
+					         }      
+                	
+                }
+                
 
 
 
