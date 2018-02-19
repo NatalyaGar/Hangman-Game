@@ -178,10 +178,11 @@
                    //music pause button
 		           $(".btn2").on("click", function() {
 				        audioElement.pause();
+				        // audioElementV.pause();
 				      });
                     
-                   
-                 
+                  
+
 
                            // play music when guesses is write for each composers 
                             
@@ -189,32 +190,35 @@
               
                        console.log(choosenWord);
                 		
-                			if (choosenWord === wordList["vivaldy"]) {
-	                			
-						        audioElement.setAttribute("src", "assets/music/Antonio_vivaldi_Winter.mp3");
+                			if (choosenWord === wordList[1]) {
+	                			console.log("Hi vivaldy " + wordList );
+						        audioElement.setAttribute("src", "assets/music/Antonio_vivaldi_Winter.mp3")
 						        audioElement.play()
 						        setTimeout(() => audioElement.play() , 1)
 
                             } 
                     	  
-                    	    else if (choosenWord === wordList["mozart"]) {
-	                    		 
-						         audioElement.setAttribute("src", "assets/music/01Mozart_Symphony40InGMinorK550-1.MoltoAllegro.mp3");
+                    	  else if (choosenWord === wordList[0]) {
+	                    		 console.log("Hi mozart " + wordList);
+	          
+						         audioElement.setAttribute("src", "assets/music/01Mozart_Symphony40InGMinorK550-1.MoltoAllegro.mp3")
 						         audioElement.play()
 						         setTimeout(() => audioElement.play() , 1)
                              }
                           
-					        else if (choosenWord === wordList["beethoven"]) {
+					    else if (choosenWord === wordList[2]) {
+                               console.log("Hi beethoven " + wordList);
                               
-					           audioElement.setAttribute("src", "assets/music/1-01Beethoven_Symphony5InCMinorOp.67-1.AllegroConBrio.mp3");
+					            audioElement.setAttribute("src", "assets/music/1-01Beethoven_Symphony5InCMinorOp.67-1.AllegroConBrio.mp3")
 					           audioElement.play()
 					           setTimeout(() => audioElement.play() , 1)
                              } 
 
                         
-                            else  if (choosenWord === wordList["tchaikovsky"]); {
+                         else if (choosenWord === wordList[3]) {
+                               console.log("Hi tchaikovsky " + wordList);
                                
-						       audioElement.setAttribute("src", "assets/music/11Tchaikovsky_NutcrackerSuiteOp.71a-WaltzOfTheFlowers.mp3");
+						       audioElement.setAttribute("src", "assets/music/11Tchaikovsky_NutcrackerSuiteOp.71a-WaltzOfTheFlowers.mp3")
 						       audioElement.play()
 	                           setTimeout(() => audioElement.play() , 1)
 					         }      
