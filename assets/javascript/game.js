@@ -61,6 +61,10 @@
     function checkLetters(letter){
      
 		     console.log(letter);  
+
+		     // if(numBlanks.indexOf(letter) >= 0 || wrongGuesses.indexOf(letter) >= 0) {
+       //       throw IllegalArgumentExcepetion (letter + " has already been guessed.");
+       //       }
 		   
    
             //does the letter exist?
@@ -84,6 +88,12 @@
 		            }
 
 		        }
+
+		     if (wrongGuesses.indexOf(letter) >= 0){
+                 throw IllegalArgumentExcepetion (letter + " has already been guessed.");
+		    }
+
+		       
 
 		    }
 
