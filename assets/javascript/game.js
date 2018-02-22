@@ -59,13 +59,13 @@
 
 
     function checkLetters(letter){
+
+				   
+             
      
 		     console.log(letter);  
 
-		     // if(numBlanks.indexOf(letter) >= 0 || wrongGuesses.indexOf(letter) >= 0) {
-       //       throw IllegalArgumentExcepetion (letter + " has already been guessed.");
-       //       }
-		   
+		
    
             //does the letter exist?
 		    var letterInWord = false;
@@ -85,30 +85,37 @@
 		            if(choosenWord[i] === letter){
                       blanksAndSuccesses[i] = letter;
                   
-		            }
-
-		        }
-
-		     if (wrongGuesses.indexOf(letter) >= 0){
-                 throw IllegalArgumentExcepetion (letter + " has already been guessed.");
-		    }
-
-		       
-
-		    }
+		             }
+		        }  
 
 
-		    else{
+			 } else {
 		    	console.log('Hello from the else condition!');
 		    	
-		    	wrongGuesses.push(letter.toUpperCase());
 		    	
-		        numGuesses --;
+		    	console.log(wrongGuesses.indexOf(letter.toUpperCase()));
+		    	console.log(wrongGuesses);
+		    	if(wrongGuesses.indexOf(letter.toUpperCase()) < 0) {
+					numGuesses --;
+					wrongGuesses.push(letter.toUpperCase());
+					console.log(wrongGuesses);	
+				}
+				else{
+					console.log("should not push");
+				}
+		    	
+		       
 		        console.log(numGuesses)
+	
 		    }
+    }
+		    
+		  	    
 
 		     console.log(blanksAndSuccesses);
-    }
+    
+
+
 
 		   
 
@@ -119,7 +126,6 @@
 			    document.getElementById('word-blank').innerHTML = blanksAndSuccesses.join(" ");
 			    document.getElementById('guesses-left').innerHTML = numGuesses;
 			    document.getElementById('wrong-guesses').innerHTML = wrongGuesses.join(" ");
-
 			    console.log(letterInChosenWord);
 			    console.log(blanksAndSuccesses);
 
@@ -152,26 +158,32 @@
        
          }
     
-
-    
+ 
+     
 
 		  startGame();
+
+
 			                 //clicks           
 					   document.onkeyup = function(event){
+
 					     
+					     	
 					                  	
 					    /*
 					    1. its going to take in the letter that we type in
 					    2. its going to pass it through the CheckLetters function 
 					    */
-					    var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase(); //taking in user guess
-					    console.log("this is the letter you typed " + letterGuessed);
-					    checkLetters(letterGuessed);
-
-					    roundComplete();
+						    var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase(); //taking in user guess
 
 
-		  }
+						    console.log("this is the letter you typed " + letterGuessed);
+						    checkLetters(letterGuessed);
+
+						    roundComplete();
+
+
+		                }
 
 	
      
@@ -201,7 +213,7 @@
                        console.log(choosenWord);
                 		
                 			if (choosenWord === wordList[1]) {
-	                			console.log("Hi vivaldy " + wordList );
+	                			console.log("Hi " + wordList[1] );
 						        audioElement.setAttribute("src", "assets/music/Antonio_vivaldi_Winter.mp3")
 						        audioElement.play()
 						        setTimeout(() => audioElement.play() , 1)
@@ -209,7 +221,7 @@
                             } 
                     	  
                     	  else if (choosenWord === wordList[0]) {
-	                    		 console.log("Hi mozart " + wordList);
+	                    		 console.log("Hi " + wordList[0]);
 	          
 						         audioElement.setAttribute("src", "assets/music/01Mozart_Symphony40InGMinorK550-1.MoltoAllegro.mp3")
 						         audioElement.play()
@@ -217,7 +229,7 @@
                              }
                           
 					    else if (choosenWord === wordList[2]) {
-                               console.log("Hi beethoven " + wordList);
+                               console.log("Hi " + wordList[2]);
                               
 					            audioElement.setAttribute("src", "assets/music/1-01Beethoven_Symphony5InCMinorOp.67-1.AllegroConBrio.mp3")
 					           audioElement.play()
@@ -226,7 +238,7 @@
 
                         
                          else if (choosenWord === wordList[3]) {
-                               console.log("Hi tchaikovsky " + wordList);
+                               console.log("Hi " + wordList[3]);
                                
 						       audioElement.setAttribute("src", "assets/music/11Tchaikovsky_NutcrackerSuiteOp.71a-WaltzOfTheFlowers.mp3")
 						       audioElement.play()
