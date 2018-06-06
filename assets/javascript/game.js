@@ -216,12 +216,8 @@
 	                			console.log("Hi " + wordList[1] );
 						        audioElement.setAttribute("src", "assets/music/Antonio_vivaldi_Winter.mp3")
 						        audioElement.play()
-<<<<<<< HEAD
-						       
-=======
 						        
 
->>>>>>> eab7f2ef5f4d06bbc1f12bb4d5c67090051c477d
                             } 
                     	  
                     	  else if (choosenWord === wordList[0]) {
@@ -229,11 +225,7 @@
 	          
 						         audioElement.setAttribute("src", "assets/music/01Mozart_Symphony40InGMinorK550-1.MoltoAllegro.mp3")
 						         audioElement.play()
-<<<<<<< HEAD
-						       
-=======
 						        
->>>>>>> eab7f2ef5f4d06bbc1f12bb4d5c67090051c477d
                              }
                           
 					    else if (choosenWord === wordList[2]) {
@@ -241,11 +233,7 @@
                               
 					            audioElement.setAttribute("src", "assets/music/1-01Beethoven_Symphony5InCMinorOp.67-1.AllegroConBrio.mp3")
 					           audioElement.play()
-<<<<<<< HEAD
-					       
-=======
 					          
->>>>>>> eab7f2ef5f4d06bbc1f12bb4d5c67090051c477d
                              } 
 
                         
@@ -254,11 +242,7 @@
                                
 						       audioElement.setAttribute("src", "assets/music/11Tchaikovsky_NutcrackerSuiteOp.71a-WaltzOfTheFlowers.mp3")
 						       audioElement.play()
-<<<<<<< HEAD
-	                        
-=======
 	                          
->>>>>>> eab7f2ef5f4d06bbc1f12bb4d5c67090051c477d
 					         }      
                 	
                 }
